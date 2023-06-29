@@ -6,7 +6,7 @@ When("I visit duckduckgo.com", () => {
 });
 
 Then("I should see a search bar", () => {
-  cy.get("input").should(
+  cy.get("#searchbox_input").should(
     "have.attr",
     "placeholder",
     "Search the web without being tracked"
