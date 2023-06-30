@@ -4,8 +4,8 @@ Given("I am on empty home page", () => {
   cy.visit("/");
 });
 
-When("I type and submit in the board name", () => {
-  cy.get("[data-cy=first-board]").type('new board{enter}');
+When("I type in {string} and submit", (boardname) => {
+  cy.get("[data-cy=first-board]").type(`${boardname}{enter}`);
 });
 
 Then("I should be redirected to the board detail", () => {
